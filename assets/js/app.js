@@ -252,19 +252,12 @@ function drawGameOver() {
 
 // FAQ interactive
 const faqAnswers = [
-    { title: "Qui es-tu ?", text: "Je suis Hermocrate, développeur junior. Je construis des projets concrets en web, Java, C#, SQL et Flutter, avec une attention particulière à l’interface et à l’organisation du code." },
-    { title: "Quels types de projets fais-tu ?", text: "Je travaille sur des applications web, des interfaces desktop, des projets SQL et des prototypes interactifs. J’aime les projets qui montrent à la fois la logique métier et l’expérience utilisateur." },
-    { title: "Quelles technologies utilises-tu ?", text: "HTML, CSS, JavaScript, PHP, Java/JavaFX, C#/WPF, SQL, PostgreSQL, Oracle, Flutter/Dart, Git et GitHub." },
-    { title: "Quel est ton projet le plus original ?", text: "Yo-Ji-Hu est un projet marquant : un jeu de cartes desktop avec terrain, cartes, phases de jeu et logique orientée objet en JavaFX." },
-    { title: "Pourquoi ce portfolio Windows 7 ?", text: "Parce qu’un portfolio doit être mémorable. L’idée est de transformer une simple page personnelle en environnement interactif que le recruteur peut explorer." },
-    { title: "Es-tu à l’aise avec GitHub ?", text: "Oui. J’utilise GitHub pour publier mes projets, rédiger des README, organiser mes dépôts et montrer l’évolution de mon travail." },
-    { title: "Comment travailles-tu sur un bug ?", text: "Je reproduis le problème, je lis l’erreur, j’isole la cause, je corrige progressivement puis je reteste. Je préfère avancer étape par étape plutôt que tout modifier d’un coup." },
-    { title: "Que montre Yo-Ji-Hu ?", text: "Il montre ma capacité à organiser un projet Java, créer une interface JavaFX, gérer des classes métier et construire une logique de jeu structurée." },
-    { title: "Que montre Calories Tracker Pro ?", text: "Il montre mes bases en PHP, formulaires, pages web, gestion de données et structuration d’une application utile autour d’un besoin concret." },
-    { title: "Que montre Audit SQL ?", text: "Il montre mon travail sur les requêtes SQL, l’optimisation, les indexes, les vues matérialisées et la vérification de données d’audit." },
+    { title: "Qui es-tu ?", text: "Je suis Hermocrate, développeur junior de 28ans. Actuellement à la recherche d'un stage de 9 semaines sur la région de Genève afin de valider l'obtention de mon diplôme supérieur d'informaticien de gestion." },
+    { title: "Quels types de projets fais-tu ?", text: "Je travaille sur des applications web, des interfaces desktop, des projets SQL et des prototypes interactifs. J’aime les projets qui touchent à la fois la logique métier et l’expérience utilisateur." },
+    { title: "Quelles technologies utilises-tu ?", text: "Java, Kotlin, Python, C#/WPF, VB.NET, HTML, CSS, JavaScript, PHP, Flutter/Dart, SQL/Oracle, Talend, Git et GitHub..." },
+    { title: "Quel est ton projet le plus original ?", text: "Yo-Ji-Hu, un jeu de cartes desktop avec terrain, cartes, phases de jeu et logique orientée objet en JavaFX." },
     { title: "As-tu des bases réseau ?", text: "Oui, j’ai des notions sur le réseau local, l’adressage IP, les ports, le modèle client/serveur et la configuration d’environnements de développement." },
     { title: "Ton objectif actuel ?", text: "Continuer à progresser, renforcer mes projets, améliorer mes bonnes pratiques et trouver une opportunité où je peux apprendre tout en contribuant concrètement." },
-    { title: "Comment te contacter ?", text: "La fenêtre Contact du bureau contient un formulaire FormSubmit. Tu peux aussi passer par GitHub depuis le premier onglet d’Internet Explorer." }
 ];
 const faqButtons = document.querySelectorAll("[data-faq]");
 const faqAnswer = document.getElementById("faq-answer");
