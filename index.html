@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERMOCRATE - Portfolio 2026</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main id="desktop">
+        <section class="desktop-icons" aria-label="Icônes du bureau">
+            <button class="desktop-icon" data-window="about-window"><span class="icon-img">👤</span><span>À propos</span></button>
+            <button class="desktop-icon" data-window="projects-window"><span class="icon-img">📁</span><span>Projets</span></button>
+            <button class="desktop-icon" data-window="skills-window"><span class="icon-img">🧰</span><span>Compétences</span></button>
+            <button class="desktop-icon" data-window="browser-window"><span class="icon-img">🌐</span><span>Internet Explorer</span></button>
+            <button class="desktop-icon" data-window="contact-window"><span class="icon-img">✉️</span><span>Contact</span></button>
+        </section>
+
+        <button class="danger-icon" id="danger-icon" aria-label="Ne pas cliquer"><span>⚠️</span><strong>Ne pas cliquer</strong></button>
+        <button class="defender-icon" id="defender-icon" aria-label="Lancer Windows Defender"><span>🛡️</span><strong>Defender</strong></button>
+        <div id="defender-hud" class="defender-hud hidden">
+            <div><strong>Windows Defender 2010</strong></div>
+            <div>Menaces supprimées : <span id="defender-score">0</span></div>
+            <div>Icônes infectées : <span id="defender-infections">0</span>/3</div>
+            <button id="stop-defender">Arrêter l’analyse</button>
+        </div>
+        <div id="easter-egg-overlay" class="hidden">
+            <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+            <div class="matrix-message">
+                <h2>Mode Matrix activé</h2>
+                <p>Pluie de pixels en cours. Le système analyse ta curiosité...</p>
+                <p class="matrix-result">Résultat : accès développeur accordé.</p>
+                <button id="close-egg">Quitter la matrice</button>
+            </div>
+        </div>
+
+        <div id="image-modal" class="image-modal hidden" aria-hidden="true">
+            <button id="close-image-modal" class="modal-close">×</button>
+            <img id="modal-image" src="" alt="Capture de projet agrandie">
+        </div>
+
+        <div class="window about-window" id="about-window">
+            <div class="window-header"><span>À propos de moi</span><button class="close-btn" aria-label="Fermer">×</button></div>
+            <div class="window-content win7-panel">
+                <h2>Bienvenue sur mon environnement de développeur</h2>
+                <p class="lead">Ce portfolio reprend l’apparence d’un faux Windows 7 pour présenter mon profil de façon interactive, professionnelle et mémorable.</p>
+                <div class="win7-grid-two">
+                    <div class="win7-card"><h3>Profil</h3><p>Je suis développeur junior, orienté projets concrets, interfaces propres et applications utiles. J’aime partir d’une idée simple et la transformer en produit fonctionnel.</p></div>
+                    <div class="win7-card"><h3>Méthode</h3><p>Je construis étape par étape : structure claire, logique compréhensible, interface utilisable, correction des bugs et amélioration progressive.</p></div>
+                </div>
+                <div class="win7-card"><h3>Ce que ce portfolio montre</h3><p>Ma capacité à créer une expérience web originale avec HTML, CSS et JavaScript : fenêtres déplaçables, explorateur de projets, formulaire de contact, page GitHub, mini-jeu rétro, FAQ interactive et easter egg Matrix.</p></div>
+                <div class="win7-card"><h3>Objectif professionnel</h3><p>Continuer à progresser en développement web, desktop et mobile, travailler sur des projets réels, apprendre de meilleures pratiques et rejoindre une équipe où je peux être utile rapidement.</p></div>
+            </div>
+        </div>
+
+        <div class="window explorer-window" id="projects-window">
+            <div class="window-header"><span>Explorateur Windows - Projets</span><button class="close-btn" aria-label="Fermer">×</button></div>
+            <div class="explorer-content single-folder-mode">
+                <section class="explorer-main projects-only">
+                    <div class="folder-grid clean-folder-grid">
+                        <button class="folder-item" data-window="project-1-window">📁<span>Yo-Ji-Hu</span></button>
+                        <button class="folder-item" data-window="project-2-window">📁<span>Calories Tracker Pro</span></button>
+                        <button class="folder-item" data-window="project-3-window">📁<span>Audit SQL</span></button>
+                        <button class="folder-item" data-window="project-4-window">📁<span>Mandat Bala</span></button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="window project-detail-window" id="project-1-window">
+            <div class="window-header"><span>Fiche projet - Yo-Ji-Hu</span><button class="close-btn">×</button></div>
+            <div class="window-content project-detail">
+                <h2>Yo-Ji-Hu</h2>
+                <div class="project-hero"><div><h3>Présentation</h3><p>Jeu de cartes desktop inspiré des duels stratégiques, développé en Java avec JavaFX. Le projet met en avant une interface de terrain complète, des zones de cartes, une gestion des joueurs, des points de vie, des phases de tour et une logique orientée objet.</p></div><div class="project-status">Java / JavaFX<br>Jeu desktop</div></div>
+                <div class="project-sections"><article><h3>Fonctionnalités</h3><ul><li>Terrain avec zones monstres, magie/piège, deck et cimetière.</li><li>Gestion des cartes monstre, magie, piège, effet et flip.</li><li>Phases de jeu, pioche, main de joueur et points de vie.</li></ul></article><article><h3>Compétences montrées</h3><p>POO, JavaFX, architecture de classes, interface utilisateur, gestion d’état et logique métier.</p></article><article><h3>Évolutions prévues</h3><p>Ajout d’effets de cartes plus avancés, équilibrage, animations de duel et sauvegarde de parties.</p></article></div>
+                <div class="screenshots"><button class="screenshot-slot" data-full="assets/img/projects/yo-ji-hu-1.png"><img src="assets/img/projects/yo-ji-hu-1.png" alt="Capture Yo-Ji-Hu 1"><span>yo-ji-hu-1.png</span></button><button class="screenshot-slot" data-full="assets/img/projects/yo-ji-hu-2.png"><img src="assets/img/projects/yo-ji-hu-2.png" alt="Capture Yo-Ji-Hu 2"><span>yo-ji-hu-2.png</span></button><button class="screenshot-slot" data-full="assets/img/projects/yo-ji-hu-3.png"><img src="assets/img/projects/yo-ji-hu-3.png" alt="Capture Yo-Ji-Hu 3"><span>yo-ji-hu-3.png</span></button></div>
+                <div class="project-links"><a href="downloads/yo-ji-hu.zip" download>Télécharger le jeu</a></div>
+            </div>
+        </div>
+
+        <div class="window project-detail-window" id="project-2-window">
+            <div class="window-header"><span>Fiche projet - Calories Tracker Pro</span><button class="close-btn">×</button></div>
+            <div class="window-content project-detail">
+                <h2>Calories Tracker Pro</h2>
+                <div class="project-hero"><div><h3>Présentation</h3><p>Application web de suivi alimentaire permettant de gérer les repas, les calories et les informations personnelles dans une interface structurée. Le projet met en avant une organisation PHP, une logique de pages et une gestion de données côté serveur.</p></div><div class="project-status">PHP / Web<br>Suivi nutrition</div></div>
+                <div class="project-sections"><article><h3>Fonctionnalités</h3><ul><li>Suivi des repas et des apports caloriques.</li><li>Pages d’authentification et espace utilisateur.</li><li>Structure MVC ou semi-MVC selon les modules.</li></ul></article><article><h3>Compétences montrées</h3><p>PHP, HTML, CSS, organisation de projet web, formulaires, routes simples et base de données.</p></article><article><h3>Évolutions prévues</h3><p>Tableau de bord plus visuel, statistiques, meilleure validation et interface responsive plus poussée.</p></article></div>
+                <div class="screenshots"><button class="screenshot-slot" data-full="assets/img/projects/calories-tracker-1.png"><img src="assets/img/projects/calories-tracker-1.png" alt="Capture Calories Tracker Pro 1"><span>calories-tracker-1.png</span></button><button class="screenshot-slot" data-full="assets/img/projects/calories-tracker-2.png"><img src="assets/img/projects/calories-tracker-2.png" alt="Capture Calories Tracker Pro 2"><span>calories-tracker-2.png</span></button><button class="screenshot-slot" data-full="assets/img/projects/calories-tracker-3.png"><img src="assets/img/projects/calories-tracker-3.png" alt="Capture Calories Tracker Pro 3"><span>calories-tracker-3.png</span></button></div>
+                <div class="project-links"><a href="https://github.com/Hermocrate42" target="_blank">GitHub</a></div>
+            </div>
+        </div>
+
+        <div class="window project-detail-window" id="project-3-window">
+            <div class="window-header"><span>Fiche projet - Audit SQL</span><button class="close-btn">×</button></div>
+            <div class="window-content project-detail">
+                <h2>Audit SQL</h2>
+                <div class="project-hero"><div><h3>Présentation</h3><p>Projet SQL orienté audit, optimisation et fiabilisation de scripts. Il regroupe des requêtes initiales, des versions optimisées, des indexes, une vue matérialisée et des scripts de vérification pour contrôler les données sensibles.</p></div><div class="project-status">SQL / Oracle<br>Audit & optimisation</div></div>
+                <div class="project-sections"><article><h3>Objectif</h3><ul><li>Auditer les opérations importantes.</li><li>Optimiser les requêtes SQL.</li><li>Structurer les scripts pour les rendre testables.</li></ul></article><article><h3>Compétences montrées</h3><p>SQL, Oracle, packages, curseurs, indexes, vues matérialisées, analyse de performance et documentation.</p></article><article><h3>Résultat</h3><p>Une base de scripts plus claire, plus maintenable et mieux préparée pour des tests ou une démonstration technique.</p></article></div>
+                <div class="project-links"><a href="https://github.com/Hermocrate42" target="_blank">GitHub</a></div>
+            </div>
+        </div>
+
+        <div class="window project-detail-window" id="project-4-window">
+            <div class="window-header"><span>Fiche projet - Mandat Bala</span><button class="close-btn">×</button></div>
+            <div class="window-content project-detail">
+                <h2>Mandat Bala</h2>
+                <div class="project-hero"><div><h3>Présentation</h3><p>Projet web réalisé autour d’un mandat applicatif, avec une interface de gestion et plusieurs modules métier. L’objectif est de proposer une application claire, structurée et adaptée à un besoin concret.</p></div><div class="project-status">Web / PHP<br>Application métier</div></div>
+                <div class="project-sections"><article><h3>Fonctionnalités</h3><ul><li>Pages de gestion organisées par besoin.</li><li>Composants réutilisables pour l’interface.</li><li>Logique de traitement côté serveur.</li></ul></article><article><h3>Compétences montrées</h3><p>PHP, JavaScript, organisation de fichiers, formulaires, intégration et amélioration progressive.</p></article><article><h3>Évolutions prévues</h3><p>Nettoyage du code, amélioration UX, sécurisation des formulaires et documentation plus complète.</p></article></div>
+                <div class="screenshots one-shot"><button class="screenshot-slot" data-full="assets/img/projects/mandat-bala-1.png"><img src="assets/img/projects/mandat-bala-1.png" alt="Capture Mandat Bala"><span>mandat-bala-1.png</span></button></div>
+                <div class="project-links"><a href="https://github.com/Hermocrate42" target="_blank">GitHub</a></div>
+            </div>
+        </div>
+
+        <div class="window skills-window" id="skills-window">
+            <div class="window-header"><span>Panneau de configuration - Compétences</span><button class="close-btn">×</button></div>
+            <div class="window-content win7-panel">
+                <h2>Compétences techniques</h2>
+                <p class="lead">Une vue organisée de mes compétences, comme un panneau de configuration système.</p>
+                <div class="control-panel-grid">
+                    <article><span>🌐</span><h3>Web</h3><p>HTML, CSS, JavaScript, PHP, formulaires, intégration responsive, interaction DOM et déploiement statique.</p></article>
+                    <article><span>☕</span><h3>Java</h3><p>Java, JavaFX, Maven, programmation orientée objet, séparation modèle/vue et logique métier.</p></article>
+                    <article><span>🪟</span><h3>Desktop</h3><p>C#, WPF, interfaces Windows, outils locaux, événements UI et manipulation de fichiers.</p></article>
+                    <article><span>📱</span><h3>Mobile</h3><p>Flutter, Dart, composants réutilisables, navigation entre écrans et interfaces multiplateformes.</p></article>
+                    <article><span>🗄️</span><h3>Bases de données</h3><p>SQL, PostgreSQL, Oracle, conception de tables, requêtes, indexes, vues matérialisées et optimisation simple.</p></article>
+                    <article><span>🧩</span><h3>Débogage & résolution</h3><p>Analyse d’erreurs, correction progressive, tests manuels, lecture de logs et amélioration du code existant.</p></article>
+                    <article><span>🛠️</span><h3>Outils</h3><p>Git, GitHub, IntelliJ IDEA, VS Code, Laragon, organisation d’arborescence et README propres.</p></article>
+                    <article><span>🖧</span><h3>Réseau & hardware</h3><p>Notions de réseau local, adressage IP, ports, client/serveur, installation d’environnements et diagnostic matériel de base.</p></article>
+                </div>
+            </div>
+        </div>
+
+        <div class="window browser-window" id="browser-window">
+            <div class="window-header"><span>Internet Explorer</span><button class="close-btn">×</button></div>
+            <div class="browser-content">
+                <div class="browser-toolbar"><button>←</button><button>→</button><button>⟳</button><input id="browser-address" type="text" value="https://github.com/Hermocrate42" aria-label="Adresse"></div>
+                <div class="browser-tabs"><button class="browser-tab active" data-tab="tab-1">GitHub</button><button class="browser-tab" data-tab="tab-3">FAQ</button></div>
+                <div class="browser-page active" id="tab-1">
+                    <div class="github-invite github-card-pro">
+                        <img class="github-profile-photo" src="assets/img/profile.png" alt="Photo de profil Hermocrate">
+                        <h2>Retrouve-moi sur GitHub</h2>
+                        <p>Mon GitHub regroupe mes projets publics, mes README, mon code et mon évolution. C’est l’endroit le plus direct pour vérifier ma manière de structurer un projet et de documenter mon travail.</p>
+                        <div class="github-stats"><span>Projets web</span><span>Java / JavaFX</span><span>PHP / SQL</span><span>C# / WPF</span></div>
+                        <a class="github-button" href="https://github.com/Hermocrate42" target="_blank">Ouvrir github.com/Hermocrate42</a>
+                        <small>Ajoute ta photo ici : <code>assets/img/profile.png</code></small>
+                    </div>
+                </div>
+                <div class="browser-page" id="tab-3">
+                    <div class="faq-page">
+                        <h2>FAQ recruteur</h2>
+                        <p>Choisis une question pour afficher une réponse rapide sur mon profil, mes projets et ma façon de travailler.</p>
+                        <div class="faq-layout">
+                            <div class="faq-buttons">
+                                <button data-faq="0">Qui es-tu ?</button><button data-faq="1">Quels types de projets fais-tu ?</button><button data-faq="2">Quelles technologies utilises-tu ?</button><button data-faq="3">Quel est ton projet le plus original ?</button><button data-faq="4">Pourquoi ce portfolio Windows 7 ?</button><button data-faq="5">Es-tu à l’aise avec GitHub ?</button><button data-faq="6">Comment travailles-tu sur un bug ?</button><button data-faq="7">Que montre Yo-Ji-Hu ?</button><button data-faq="8">Que montre Calories Tracker Pro ?</button><button data-faq="9">Que montre Audit SQL ?</button><button data-faq="10">As-tu des bases réseau ?</button><button data-faq="11">Ton objectif actuel ?</button><button data-faq="12">Comment te contacter ?</button>
+                            </div>
+                            <div class="faq-answer" id="faq-answer"><h3>Bienvenue</h3><p>Clique sur une question à gauche. Cette FAQ remplace le chatbot : elle est plus fiable, gratuite et parfaitement compatible GitHub Pages.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window contact-window" id="contact-window">
+            <div class="window-header"><span>Contact</span><button class="close-btn">×</button></div>
+            <div class="window-content"><h2>Me contacter</h2><p>Envoyez moi un message je vous recontacterai dès que possible.<form id="contact-form" class="contact-form" action="https://formsubmit.co/hermocrate.dev@gmail.com" method="POST"><input type="hidden" name="_subject" value="Nouveau message depuis le portfolio"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://hermocrate.github.io/portfolio-windows7/?message=sent"><label>Nom ou raison sociale</label><input type="text" name="name" required><label>Email</label><input type="email" name="email" required><label>Message</label><textarea name="message" rows="5" required></textarea><button type="submit">Envoyer</button><p id="contact-status" class="contact-status"></p></form></div>
+        </div>
+
+        <nav id="start-menu" class="hidden"><div class="start-menu-header">HERMOCRATE</div><button data-window="about-window">À propos</button><button data-window="projects-window">Projets</button><button data-window="skills-window">Compétences</button><button data-window="browser-window">Internet</button><button data-window="contact-window">Contact</button></nav>
+        <footer class="taskbar"><button id="start-button">🪟 Démarrer</button><div id="taskbar-spacer"></div><div class="taskbar-clock" id="clock">00:00</div></footer>
+    </main>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
