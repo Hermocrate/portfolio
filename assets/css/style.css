@@ -152,3 +152,35 @@ button, input, textarea { font-family: inherit; }
 @keyframes virusPulse { from { transform: translate(-50%, -50%) scale(.96) rotate(-2deg); } to { transform: translate(-50%, -50%) scale(1.05) rotate(2deg); } }
 .defender-pop { position: fixed; z-index: 245; transform: translate(-50%, -50%); color: #fff; background: rgba(14,116,144,.88); border: 1px solid rgba(255,255,255,.7); border-radius: 999px; padding: 5px 10px; font-weight: 800; text-shadow: 1px 1px 1px #000; pointer-events: none; animation: defenderPop .65s ease-out forwards; }
 @keyframes defenderPop { from { opacity: 1; transform: translate(-50%, -50%) scale(.8); } to { opacity: 0; transform: translate(-50%, -95%) scale(1.25); } }
+
+/* Ajout CV + icône invisible + grille projets */
+
+.invisible-danger {
+    color: transparent;
+    text-shadow: none;
+}
+.invisible-danger span,
+.invisible-danger strong {
+    opacity: 0;
+}
+.invisible-danger:hover,
+.invisible-danger:focus {
+    background: rgba(255,255,255,.22);
+    border-color: rgba(255,255,255,.45);
+    box-shadow: 0 0 18px rgba(255,255,255,.45);
+}
+.project-folder-grid {
+    grid-template-columns: repeat(4, 135px);
+    grid-template-rows: repeat(2, 125px);
+    gap: 26px 28px;
+}
+.project-folder-grid .folder-item span {
+    font-size: 14px;
+    line-height: 1.2;
+}
+@media (max-width: 850px) {
+    .project-folder-grid {
+        grid-template-columns: repeat(2, 135px);
+        grid-template-rows: auto;
+    }
+}
